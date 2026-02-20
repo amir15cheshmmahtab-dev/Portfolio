@@ -4,10 +4,12 @@ import { useRef, ReactNode } from "react";
 interface MagneticButtonProps {
   children: ReactNode;
   className?: string;
+    type?: "button" | "submit" | "reset";  
+  disabled?: boolean; 
   onClick?: () => void;
 }
 
-const MagneticButton = ({ children, className = "", onClick }: MagneticButtonProps) => {
+const MagneticButton = ({ children, className = "", type = "button", disabled, onClick }: MagneticButtonProps) => {
   const ref = useRef<HTMLButtonElement>(null);
   
   const x = useMotionValue(0);
@@ -42,6 +44,8 @@ const MagneticButton = ({ children, className = "", onClick }: MagneticButtonPro
   return (
     <motion.button
       ref={ref}
+      type={type}  
+      disabled={disabled}
       className={className}
       style={{
         x: xSpring,

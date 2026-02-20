@@ -11,7 +11,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            © 2024 John Doe. Crafted with passion.
+            © 2026 Amir Cheshm Mahtab. Crafted with passion.
           </motion.p>
           <motion.p
             className="text-muted-foreground text-sm"
@@ -20,7 +20,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            Built with React & Framer Motion
+            Built with Next & Framer Motion
           </motion.p>
         </div>
       </div>

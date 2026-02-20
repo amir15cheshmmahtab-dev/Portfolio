@@ -66,7 +66,7 @@ const AnimatedNav = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              JD
+              Amir Cheshm Mahtab
             </motion.button>
 
             {/* Desktop Navigation */}

@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code, Palette, Zap, Users } from "lucide-react";
 import AnimatedText from "./AnimatedText";
+import myphoto from "../../public/images/Profile picture.jpg" 
 
 const skills = [
   { icon: Code, label: "Development", description: "Next , React, Nest ,Vue , TypeScript , Node.js , PostgreSQL , Mongodb , Prisma , GraphQL , Rest , Tailwind , Bootstrap, Shadcn UI , Git , CI/CD , AWS , Docker , JWT", color: "from-primary to-blue-500" },
@@ -135,7 +136,7 @@ const AboutSection = () => {
                       textShadow: "0 0 40px hsl(185 100% 50% / 0.8)",
                     }}
                   >
-                    JD
+                    <img src={myphoto}/>
                   </motion.div>
                 </div>
               </motion.div>
@@ -151,7 +152,7 @@ const AboutSection = () => {
                   boxShadow: "0 10px 30px -10px hsl(185 100% 50% / 0.3)",
                 }}
               >
-                <span className="text-primary font-semibold">5+ Years</span>
+                {/* <span className="text-primary font-semibold">5+ Years</span> */}
               </motion.div>
               
               <motion.div
@@ -164,7 +165,7 @@ const AboutSection = () => {
                   boxShadow: "0 10px 30px -10px hsl(280 100% 65% / 0.3)",
                 }}
               >
-                <span className="text-accent font-semibold">50+ Projects</span>
+                <span className="text-accent font-semibold">5+ Projects</span>
               </motion.div>
             </motion.div>
           </motion.div>
