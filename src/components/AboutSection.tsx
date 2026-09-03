@@ -5,7 +5,7 @@ import AnimatedText from "./AnimatedText";
 import myphoto from "../../public/images/Profile picture.jpg" 
 
 const skills = [
-  { icon: Code, label: "Development", description: "Next , React, Nest ,Vue , TypeScript , Node.js , PostgreSQL , Mongodb , Prisma , GraphQL , Rest , Tailwind , Bootstrap, Shadcn UI , Git , CI/CD , AWS , Docker , JWT", color: "from-primary to-blue-500" },
+  { icon: Code, label: "Development", description: "Next , React, Nuxt ,Vue , TypeScript , Node.js , PostgreSQL , Mongodb , Prisma , GraphQL , Rest , Tailwind , Bootstrap, Shadcn UI , Git , CI/CD , AWS , Docker , JWT", color: "from-primary to-blue-500" },
   { icon: Palette, label: "Design", description: "Figma, UI/UX, Motion , GSAP", color: "from-accent to-pink-500" },
   { icon: Zap, label: "Performance", description: "Optimization, Speed , Responsive Design, SEO", color: "from-yellow-500 to-orange-500" },
   { icon: Users, label: "Collaboration", description: "Agile, Communication , Commitment", color: "from-green-500 to-emerald-500" },

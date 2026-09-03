@@ -411,6 +411,7 @@ import AnimatedText from "@/components/AnimatedText";
 import MagneticButton from "@/components/MagneticButton";
 import ImageCarouselModal from "./ImageCarouselModal";
 
+
 const ProjectDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -584,18 +585,20 @@ const ProjectDetails = () => {
           >
             {project.liveUrl && (
               <MagneticButton
-                className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold flex items-center gap-2 glow-primary"
+              onClick={() => window.open(project.liveUrl, "_blank")}
+                className="px-8 py-4 border border-border rounded-full font-semibold flex items-center gap-2 hover:bg-secondary transition-colors glow-subtle"
               >
-                <ExternalLink className="w-5 h-5" />
-                View Live Site
+                <ExternalLink className="w-5 h-5 " />
+                رفتن به وبسایت
               </MagneticButton>
             )}
             {project.githubUrl && (
               <MagneticButton
+                onClick={() => window.open(project.githubUrl, "_blank")}
                 className="px-8 py-4 border border-border rounded-full font-semibold flex items-center gap-2 hover:bg-secondary transition-colors"
               >
                 <Github className="w-5 h-5" />
-                View Source
+                سورس کد محرمانه میباشد
               </MagneticButton>
             )}
           </motion.div>
@@ -787,7 +790,6 @@ const ProjectDetails = () => {
           animate={{ opacity: [0.5, 0.8, 0.5] }}
           transition={{ duration: 5, repeat: Infinity }}
         />
-
         <div className="container mx-auto px-6">
           <LiquidGlass className="p-12 md:p-16 text-center" intensity="high">
             <motion.div
