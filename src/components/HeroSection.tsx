@@ -144,7 +144,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           {/* I design and build beautiful interfaces that bring ideas to life through motion and interaction */}
-          I play in the entire playground—from the hidden architecture to the pixels you touch. Bringing together solid server-side engineering with the magic of interactive design.
+در تمام لایه‌های یک محصول، از معماری و زیرساخت سمت سرور تا رابط کاربری و تجربه کاربر، فعالیت می‌کنم. تمرکز من ترکیب مهندسی نرم‌افزار در سمت سرور با طراحی تعاملی برای ساخت محصولات کاربردی، مقیاس‌پذیر و کاربرمحور است.
         </motion.p>
 
         <motion.div
@@ -157,7 +157,7 @@ const HeroSection = () => {
             onClick={() => scrollToSection("work")}
             className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold text-lg glow-primary relative overflow-hidden group"
           >
-            <span className="relative z-10">View My Work</span>
+            <span className="relative z-10">مشاهده نمونه‌کارها ⭐</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary"
               initial={{ x: "-100%" }}
@@ -169,7 +169,7 @@ const HeroSection = () => {
             onClick={() => scrollToSection("about")}
             className="px-8 py-4 border border-border rounded-full font-semibold text-lg hover:bg-secondary transition-colors relative overflow-hidden group"
           >
-            <span className="relative z-10">About Me</span>
+            <span className="relative z-10">درباره من ⭐</span>
           </MagneticButton>
         </motion.div>
       </motion.div>

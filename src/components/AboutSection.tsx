@@ -1,14 +1,18 @@
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Palette, Zap, Users } from "lucide-react";
+import { Code, Palette, Zap, Users, Database ,ShieldCheck, Workflow, } from "lucide-react";
 import AnimatedText from "./AnimatedText";
 import myphoto from "../../public/images/Profile picture.jpg" 
 
 const skills = [
-  { icon: Code, label: "Development", description: "Next , React, Nuxt ,Vue , TypeScript , Node.js , PostgreSQL , Mongodb , Prisma , GraphQL , Rest , Tailwind , Bootstrap, Shadcn UI , Git , CI/CD , AWS , Docker , JWT", color: "from-primary to-blue-500" },
-  { icon: Palette, label: "Design", description: "Figma, UI/UX, Motion , GSAP", color: "from-accent to-pink-500" },
-  { icon: Zap, label: "Performance", description: "Optimization, Speed , Responsive Design, SEO", color: "from-yellow-500 to-orange-500" },
-  { icon: Users, label: "Collaboration", description: "Agile, Communication , Commitment", color: "from-green-500 to-emerald-500" },
+  { icon: Code, label:"Frontend", description: "TypeScript, JavaScript, React.js, Next.js, Vue.js, Nuxt.js, HTML5, CSS3, Tailwind CSS, Sass/SCSS, Redux, Zustand, Pinia, React Query, Vue Query, SSR, SSG, PWA" },
+  {icon: Code, label: "Backend", description: "Node.js, Express.js, REST API, RESTful API Design, JWT, Authentication, Authorization, Role-Based Access Control (RBAC), Protected Routes, Business Logic, Modular Architecture"},
+ { icon: Palette, label:"Design", description: "Figma, UI/UX, Motion , GSAP", color: "from-accent to-pink-500" },
+  {icon: Database, label: "Database & ORM", description: "PostgreSQL, MongoDB, Prisma ORM, Database Design, Data Modeling, Schema Design, Query Optimization, Relational Database, NoSQL"},
+  { icon: ShieldCheck, label:"Testing & Monitoring", description: "Jest, Cypress, Unit Testing, Integration Testing, End-to-End Testing, Prometheus", color: "from-accent to-pink-500" },
+  { icon: Workflow, label:"DevOps & Tools", description: "Docker, CI/CD, Jenkins, Linux, Git, GitHub", color: "from-accent to-pink-500" },
+  { icon: Zap, label:"Development Practices", description: "Agile, Scrum, Code Review, Pull Request, Modular Architecture ,Optimization, Speed , Responsive Design, SEO", color: "from-accent to-pink-500" },
+  // { icon: Users, label: "Collaboration", description: "Agile, Communication , Commitment", color: "from-green-500 to-emerald-500" },
 ];
 
 const AboutSection = () => {
@@ -194,9 +198,8 @@ const AboutSection = () => {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.5 }}
               >
-Frontend Developer with a background in structural engineering and a passion for building complex, scalable systems from the ground up. Following a 7-year career in construction management, I transitioned into software development to apply my "builder’s mindset" to the digital world—focusing on logic, structural integrity, and clean architecture.
-I specialize in crafting high-performance, SEO-friendly web applications within the React ecosystem. My approach bridges the gap between sophisticated design and technical functionality, ensuring that every interface I build is accessible, responsive, and optimized for the end-user.
-By combining the discipline of professional engineering with a deep understanding of modern JavaScript frameworks, global state management, and modular CSS, I deliver clean, maintainable code that solves real-world problems. I thrive in collaborative environments where I can contribute to innovative projects and continuously push the boundaries of modern web development.
+                توسعه‌دهنده Full-stack با تجربه عملی در طراحی و توسعه اپلیکیشن‌های واقعی با استفاده از React ،Vue ،Nuxt ،Next ،Node.js و Express. دارای تجربه قوی در توسعه Frontend و Backend، طراحی و پیاده‌سازی REST API، مدیریت state، طراحی database و authentication و deployment با Docker. تمرکز بر ساخت رابطه‌های کاربری scalable و تجربه‌های کاربری روان در کنار توسعه feature های قابل اعتماد از مرحله architecture تا production.
+
               </motion.p>
             </motion.div>
 

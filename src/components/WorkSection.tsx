@@ -83,7 +83,7 @@ const WorkSection = () => {
             />
             
             <span className="relative flex items-center gap-3 font-medium">
-              View All Projects
+              همه پروژه‌ها
               <motion.span
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}

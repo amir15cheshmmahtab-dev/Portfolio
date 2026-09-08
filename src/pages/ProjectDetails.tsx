@@ -798,17 +798,16 @@ const ProjectDetails = () => {
               viewport={{ once: false }}
             >
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
-                Like What You See?
+                  چیزی که می‌بینید را دوست دارید؟
               </h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-                I'd love to discuss how I can help bring your vision to life with the same level of creativity and attention to detail.
-              </p>
+خوشحال می‌شوم درباره ایده و چشم‌انداز شما صحبت کنیم و با همان میزان خلاقیت و دقت، در تبدیل آن به یک تجربه دیجیتال حرفه‌ای همراهتان باشم.              </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <MagneticButton
                   onClick={() => navigate("/")}
                   className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold glow-primary"
                 >
-                  View More Projects
+                  مشاهده پروژه های بیشتر
                 </MagneticButton>
                 <MagneticButton
                   onClick={() => {
@@ -819,7 +818,7 @@ const ProjectDetails = () => {
                   }}
                   className="px-8 py-4 border border-border rounded-full font-semibold hover:bg-secondary transition-colors"
                 >
-                  Get In Touch
+                  ارتباط با من
                 </MagneticButton>
               </div>
             </motion.div>

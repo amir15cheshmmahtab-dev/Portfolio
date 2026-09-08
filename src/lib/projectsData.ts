@@ -62,6 +62,15 @@ import eightlead from "../../public/images/lead-magement/7.png"
 import ninelead from "../../public/images/lead-magement/8.png"
 // import tenlead from "../../public/images/lead-magement/9.png"
 // gallery ==> RealEstateOS 
+import dashboard from "../../public/images/realState/dashboard.png"
+import tasks from "../../public/images/realState/tasks.png"
+import customers from "../../public/images/realState/customers.png"
+import leads from "../../public/images/realState/leads.png"
+import contracts from "../../public/images/realState/contracts.png"
+import owners from "../../public/images/realState/owners.png"
+import payments from "../../public/images/realState/payments.png"
+
+
 
 
 
@@ -177,6 +186,55 @@ export const projects: Project[] = [
       ]
     },
   },
+ {
+    id: "RealEstateOS",
+    title: "RealEstateOS — Real Estate Management SaaS",
+    shortDescription:"پلتفرم SaaS چندمستاجری (Multi-Tenant) برای دیجیتالی‌سازی فرآیندهای مدیریت آژانس‌های املاک، شامل مدیریت Leads، Deals، قراردادها، پرداخت‌ها، بازدیدها، Tasks، Activities و کمیسیون‌های مالی.",   
+    fullDescription:`
+      RealEstateOS یک پلتفرم Multi-Tenant است که به آژانس‌های املاک اجازه می‌دهد تمام فرآیندهای کاری خود را در یک سیستم یکپارچه مدیریت کنند؛ از ثبت و پیگیری Leadها از اولین تماس تا نهایی شدن معامله، مدیریت قراردادها و برنامه پرداخت‌ها، زمان‌بندی بازدید از ملک، تخصیص وظایف به مشاوران و محاسبه خودکار کمیسیون‌ها.
+
+هر آژانس در یک Workspace مستقل و ایزوله فعالیت می‌کند و Role-Based Access Control تضمین می‌کند که هر کارمند تنها به اطلاعات و بخش‌های مرتبط با جایگاه خود دسترسی داشته باشد. سیستم Activity Logging نیز تاریخچه کاملی از تغییرات مربوط به Leadها، معاملات و فعالیت‌های اعضای تیم ثبت می‌کند. همچنین سیستم Notification، مشاوران را از وظایف، مهلت‌ها و رویدادهای مهم مطلع نگه می‌دارد.
+
+داشبورد مدیریتی، دیدی شفاف و لحظه‌ای از عملکرد Sales Pipeline، میزان فعالیت و workload تیم و وضعیت مالی ارائه می‌دهد و به جای استفاده از فایل‌های پراکنده Excel و پیگیری‌های دستی، تمام این فرآیندها را در یک سیستم یکپارچه و سازمان‌یافته متمرکز می‌کند.
+    
+Backend با استفاده از Node.js و Express.js به‌صورت یک Modular REST API توسعه داده شده و با JWT Authentication ایمن شده است. داده‌ها با استفاده از PostgreSQL و Prisma ORM مدیریت می‌شوند تا ساختاری قابل اعتماد و سازمان‌یافته برای داده‌های سیستم فراهم شود.
+
+Frontend با استفاده از Next.js و TypeScript توسعه یافته و یک رابط کاربری Type-Safe و Responsive با Protected Routes و مدیریت روان دریافت و پردازش داده‌ها ارائه می‌دهد.
+
+کل سیستم با استفاده از Docker کانتینری شده است تا اجرای برنامه در محیط‌های Development و Production به‌صورت یکسان و قابل پیش‌بینی انجام شود.
+
+`,
+    tags: ["Next.js", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Prisma", "Tailwindcss", "Docker"],
+    color: "from-accent/40 to-pink-500/40",
+    hoverColor: "group-hover:from-accent/60 group-hover:to-pink-500/60",
+    features: [
+      { title: "End-to-End SaaS Platform", description: "توسعه یک SaaS Full-Stack از معماری و Backend تا Frontend و Deployment؛ شامل REST API، Next.js، Express.js، TypeScript و Docker برای مدیریت یکپارچه فرآیندهای آژانس املاک." },
+      { title: "Adaptive UI Architecture", description: "یک سیستم طراحی پیکسلی بی‌نقص و سازگار با موبایل که دارای یک حالت تاریک/روشن پویا است که به طور خودکار به تنظیمات سیستم کاربر احترام می‌گذارد." },
+      { title: "B2B در حوزه املاک", description: "B2B در حوزه املاک یعنی یک شرکت یا پلتفرم املاک، خدمات خود را به کسب‌وکارهای دیگر مثل آژانس‌های املاک، مشاوران، سازندگان، انبوه‌سازان و سرمایه‌گذاران ارائه می‌دهد. این خدمات می‌تواند شامل مدیریت فایل و مشتری، بازاریابی و فروش پروژه‌ها، ایجاد ارتباط بین فعالان بازار و مدیریت یا اجاره فضاهای تجاری باشد." },
+      { title: "Data Integrity & Transactions", description: "طراحی Relational Data Model با PostgreSQL و Prisma ORM با تمرکز بر Data Integrity و Transaction Consistency در فرآیندهای حساس مانند Deals، قراردادها و پرداخت‌ها." },
+    ],
+    techStack: ["Next.js", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Prisma", "Tailwindcss", "Docker"],
+    implementation: `RealEstateOS یک پلتفرم **SaaS چندمستاجری (Multi-Tenant)** برای دیجیتالی‌سازی و مدیریت فرآیندهای آژانس‌های املاک است که بخش‌هایی مانند Leads، Deals، قراردادها، پرداخت‌ها و بازدیدها را در یک سیستم یکپارچه مدیریت می‌کند.
+در پیاده‌سازی پروژه، Backend با **Node.js، Express.js و TypeScript** و بر پایه **REST API و معماری Modular** توسعه داده شد و Frontend با **Next.js و TypeScript** پیاده‌سازی شد.
+برای مدیریت داده‌ها از **PostgreSQL و Prisma ORM** استفاده شده و ساختار دیتابیس با تمرکز بر **Data Integrity و Transaction Consistency** طراحی شده است.
+همچنین **JWT Authentication، RBAC و Protected Routes** برای مدیریت احراز هویت و سطح دسترسی کاربران پیاده‌سازی شده و پروژه با **Docker و CI/CD** برای محیط‌های مختلف آماده‌سازی شده است.
+`,
+    liveUrl: "https://velocity-app.example.com",
+    githubUrl: "https://github.com/example/velocity",
+    images: {
+      // hero: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&h=800&fit=crop",
+       hero: ecommerceHeror ,
+      gallery: [
+      dashboard,
+      tasks,
+      customers,
+      leads,
+      payments,
+      owners,
+      contracts,
+      ],
+    },
+  },
   {
     id: "Lead-Management",
     title: "LeadMetric — Sales Lead Analytics Platform",
@@ -251,45 +309,7 @@ export const projects: Project[] = [
       ],
     },
   },
-  {
-    id: "RealEstateOS",
-    title: "RealEstateOS — Real Estate Management SaaS",
-    shortDescription:"پلتفرم SaaS چندمستاجری (Multi-Tenant) برای دیجیتالی‌سازی فرآیندهای مدیریت آژانس‌های املاک، شامل مدیریت Leads، Deals، قراردادها، پرداخت‌ها، بازدیدها، Tasks، Activities و کمیسیون‌های مالی.",   
-    fullDescription:`
-      RealEstateOS یک پلتفرم Multi-Tenant است که به آژانس‌های املاک اجازه می‌دهد تمام فرآیندهای کاری خود را در یک سیستم یکپارچه مدیریت کنند؛ از ثبت و پیگیری Leadها از اولین تماس تا نهایی شدن معامله، مدیریت قراردادها و برنامه پرداخت‌ها، زمان‌بندی بازدید از ملک، تخصیص وظایف به مشاوران و محاسبه خودکار کمیسیون‌ها.
-
-هر آژانس در یک Workspace مستقل و ایزوله فعالیت می‌کند و Role-Based Access Control تضمین می‌کند که هر کارمند تنها به اطلاعات و بخش‌های مرتبط با جایگاه خود دسترسی داشته باشد. سیستم Activity Logging نیز تاریخچه کاملی از تغییرات مربوط به Leadها، معاملات و فعالیت‌های اعضای تیم ثبت می‌کند. همچنین سیستم Notification، مشاوران را از وظایف، مهلت‌ها و رویدادهای مهم مطلع نگه می‌دارد.
-
-داشبورد مدیریتی، دیدی شفاف و لحظه‌ای از عملکرد Sales Pipeline، میزان فعالیت و workload تیم و وضعیت مالی ارائه می‌دهد و به جای استفاده از فایل‌های پراکنده Excel و پیگیری‌های دستی، تمام این فرآیندها را در یک سیستم یکپارچه و سازمان‌یافته متمرکز می‌کند.
-    
-Backend با استفاده از Node.js و Express.js به‌صورت یک Modular REST API توسعه داده شده و با JWT Authentication ایمن شده است. داده‌ها با استفاده از PostgreSQL و Prisma ORM مدیریت می‌شوند تا ساختاری قابل اعتماد و سازمان‌یافته برای داده‌های سیستم فراهم شود.
-
-Frontend با استفاده از Next.js و TypeScript توسعه یافته و یک رابط کاربری Type-Safe و Responsive با Protected Routes و مدیریت روان دریافت و پردازش داده‌ها ارائه می‌دهد.
-
-کل سیستم با استفاده از Docker کانتینری شده است تا اجرای برنامه در محیط‌های Development و Production به‌صورت یکسان و قابل پیش‌بینی انجام شود.
-
-`,
-    tags: ["Next.js", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Prisma", "Tailwindcss", "Docker"],
-    color: "from-accent/40 to-pink-500/40",
-    hoverColor: "group-hover:from-accent/60 group-hover:to-pink-500/60",
-    features: [
-      { title: "Persistent Cart Logic", description: "Integrated browser storage synchronization ensuring shopping carts and wishlists remain intact across sessions for a frictionless return experience." },
-      { title: "Intelligent Filtering", description: "High-performance search and multi-category filtering logic that updates the product grid instantaneously without page reloads" },
-      { title: "Visual State Feedback", description: "Advanced UI feedback loops including 'Add to Cart' animations, dynamic button states, and skeleton loaders to bridge data-fetching gaps." },
-      { title: "Adaptive UI Architecture", description: "A pixel-perfect, mobile-first design system featuring a dynamic Dark/Light mode toggle that respects user system preferences automatically." },
-    ],
-    techStack: ["React", "Javascript", "Bootstrap", "Mock api" , "Redux-toolkit"],
-    implementation: "The architecture focuses on advanced state management to synchronize complex shopping cart logic and user wishlists in real-time. By integrating a structured Mock API, the system simulates asynchronous data fetching with high-fidelity error handling and loading states. The UI is engineered with a mobile-first approach using Tailwind CSS, ensuring high-performance rendering and a seamless 'perfect-pixel' transition across all device breakpoints.",
-    liveUrl: "https://velocity-app.example.com",
-    githubUrl: "https://github.com/example/velocity",
-    images: {
-      // hero: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&h=800&fit=crop",
-       hero: ecommerceHeror ,
-      gallery: [
-      
-      ],
-    },
-  },
+  
 ];
 
 export const getProjectById = (id: string): Project | undefined => {

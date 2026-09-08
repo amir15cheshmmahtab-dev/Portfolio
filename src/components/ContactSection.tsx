@@ -459,14 +459,15 @@ const ContactSection = () => {
               className="text-sm uppercase tracking-widest text-primary mb-4"
               animate={{ letterSpacing: isInView ? "0.2em" : "0.1em" }}
             >
-              Get In Touch
+              ارتباط با من
             </motion.h2>
             <div className="text-4xl md:text-6xl font-display font-bold mb-6">
               <AnimatedText text="Let's" className="justify-center" />
               <AnimatedText text="Collaborate" className="justify-center text-gradient" delay={0.2} />
             </div>
             <motion.p className="text-xl text-muted-foreground max-w-2xl mx-auto" variants={itemVariants}>
-              Have a project in mind? I'd love to hear about it. Let's create something amazing together.
+             ایده‌ای در ذهن دارید؟
+بیایید درباره‌اش صحبت کنیم و با هم آن را به یک تجربه دیجیتال جذاب تبدیل کنیم.
             </motion.p>
           </motion.div>
 
