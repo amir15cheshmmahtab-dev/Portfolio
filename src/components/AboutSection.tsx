@@ -6,7 +6,7 @@ import myphoto from "../../public/images/Profile picture.jpg"
 
 const skills = [
   { icon: Code, label:"Frontend", description: "TypeScript, JavaScript, React.js, Next.js, Vue.js, Nuxt.js, HTML5, CSS3, Tailwind CSS, Sass/SCSS, Redux, Zustand, Pinia, React Query, Vue Query, SSR, SSG, PWA" },
-  {icon: Code, label: "Backend", description: "Node.js, Express.js, REST API, RESTful API Design, JWT, Authentication, Authorization, Role-Based Access Control (RBAC), Protected Routes, Business Logic, Modular Architecture"},
+  {icon: Code, label: "Backend", description: "Node.js, Express.js, Python, Django, REST API, RESTful API Design, JWT, Authentication, Authorization, Role-Based Access Control (RBAC), Protected Routes, Business Logic, Modular Architecture"},
  { icon: Palette, label:"Design", description: "Figma, UI/UX, Motion , GSAP", color: "from-accent to-pink-500" },
   {icon: Database, label: "Database & ORM", description: "PostgreSQL, MongoDB, Prisma ORM, Database Design, Data Modeling, Schema Design, Query Optimization, Relational Database, NoSQL"},
   { icon: ShieldCheck, label:"Testing & Monitoring", description: "Jest, Cypress, Unit Testing, Integration Testing, End-to-End Testing, Prometheus", color: "from-accent to-pink-500" },

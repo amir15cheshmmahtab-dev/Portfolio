@@ -69,6 +69,11 @@ import leads from "../../public/images/realState/leads.png"
 import contracts from "../../public/images/realState/contracts.png"
 import owners from "../../public/images/realState/owners.png"
 import payments from "../../public/images/realState/payments.png"
+// gallery ==> OIEC
+import oiec from "../../public/images/OIEC/oiec.webp"
+import chatbot from "../../public/images/OIEC/chatbot.png"
+// gallery ==> Teractor
+import tractor from "../../public/images/Teractor/teractor.jpeg"
 
 
 
@@ -186,7 +191,90 @@ export const projects: Project[] = [
       ]
     },
   },
- {
+  {
+    id: "OIEC",
+    title: "Enterprise product information processing and management system",
+    shortDescription:"یک نرم‌افزار سازمانی برای پردازش و مدیریت اطلاعات محصول که به‌منظور تسهیل کدگذاری و تبدیل داده‌های موجود توسعه یافته است.",   
+    fullDescription:`
+یک پلتفرم سازمانی جامع برای گروه اویک (OIEC) با هدف ارائه یکپارچه اطلاعات سازمان، شرکت‌های زیرمجموعه، پروژه‌ها، اخبار و فعالیت‌های سازمانی توسعه داده شد.
+
+این وب‌سایت با پشتیبانی از زبان‌های فارسی و انگلیسی، بخش‌های مختلفی مانند معرفی سازمان، شرکت‌های گروه، پروژه‌ها، اخبار، رویدادها، مسئولیت اجتماعی و اطلاعات سازمانی را پوشش می‌دهد.
+
+یکی از قابلیت‌های اصلی پروژه، توسعه و یکپارچه‌سازی یک **AI Chatbot** در داخل وب‌سایت است که به کاربران امکان می‌دهد به‌صورت تعاملی با اطلاعات و محتوای سازمان ارتباط برقرار کرده و پاسخ‌های مرتبط با مجموعه OIEC دریافت کنند.
+
+تمرکز پروژه علاوه بر ایجاد یک تجربه کاربری مدرن و واکنش‌گرا، بر ساخت یک پلتفرم قابل توسعه برای ارائه اطلاعات سازمانی و ایجاد تعامل هوشمند با کاربران بوده است.
+`,
+    tags: ["React.js", "TypeScript", "Node.js", "Express.js", "Flowise", "AI Integration", "Server Deployment", "Docker"],
+    color: "from-accent/40 to-pink-500/40",
+    hoverColor: "group-hover:from-accent/60 group-hover:to-pink-500/60",
+    features: [
+      { title: "Enterprise Corporate Platform", description:"توسعه یک پلتفرم سازمانی جامع برای ارائه اطلاعات گروه اویک شامل معرفی سازمان، شرکت‌های زیرمجموعه، پروژه‌ها، اخبار، رویدادها و مسئولیت اجتماعی." },
+      { title: "AI-Powered Chatbot", description: "توسعه و یکپارچه‌سازی یک چت‌بات هوشمند مبتنی بر AI در وب‌سایت که امکان تعامل کاربران با اطلاعات و محتوای سازمانی را به‌صورت conversational فراهم می‌کند."},
+      { title: "Multilingual Architecture", description:"پیاده‌سازی ساختار چندزبانه برای ارائه محتوای فارسی و انگلیسی و ایجاد تجربه کاربری یکپارچه برای کاربران با زبان‌های مختلف." },
+      { title: "Structured Content & Information", description:"طراحی ساختارهای مختلف برای ارائه و سازمان‌دهی اطلاعات مربوط به پروژه‌ها، شرکت‌های گروه، اخبار، رویدادها و سایر محتوای سازمانی." },
+      {title: "Responsive Enterprise UX",description: "پیاده‌سازی رابط کاربری واکنش‌گرا و منسجم برای دسترسی آسان کاربران به حجم بالایی از اطلاعات سازمانی در دسکتاپ و موبایل."},
+    ],
+    techStack: ["React.js", "TypeScript", "Node.js", "Express.js", "Flowise", "AI Integration", "Server Deployment", "Docker"],
+    implementation: `
+      این پروژه به‌عنوان یک پلتفرم سازمانی برای گروه اویک با تمرکز بر ارائه ساختاریافته اطلاعات سازمانی و ایجاد تعامل هوشمند با کاربران توسعه داده شد.
+
+Frontend با استفاده از **React.js و TypeScript** پیاده‌سازی شد و ساختار کامپوننت‌ها و صفحات به‌صورت قابل توسعه طراحی گردید تا بخش‌های مختلف وب‌سایت مانند معرفی سازمان، شرکت‌های گروه، پروژه‌ها، اخبار و مسئولیت اجتماعی در یک معماری یکپارچه ارائه شوند.
+
+برای بخش Backend و ارائه سرویس‌های موردنیاز از **Node.js و Express.js** استفاده شد.
+
+یکی از بخش‌های مهم پروژه، توسعه و Integration یک **AI Chatbot** در داخل وب‌سایت بود. این قابلیت با استفاده از **Flowise و AI Integration** پیاده‌سازی شد تا کاربران بتوانند به‌صورت conversational با اطلاعات سازمانی تعامل داشته باشند و پاسخ‌های مرتبط با محتوای OIEC دریافت کنند.
+
+پروژه با پشتیبانی از زبان‌های **فارسی و انگلیسی** توسعه داده شد و برای استقرار و مدیریت محیط اجرا از **Docker و Server Deployment** استفاده شده است.
+    `,
+    liveUrl: "https://www.oiecgroup.com/",
+    githubUrl: "",
+    images: {
+      // hero: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&h=800&fit=crop",
+       hero: oiec ,
+      gallery: [
+      chatbot,
+      ],
+    },
+  },
+  {
+    id: "Tractor-Club",
+    title: "Tractor Club — Official Sports & Fan Engagement Platform",
+    shortDescription: "یک پلتفرم جامع دیجیتال برای باشگاه تراکتور که با هدف ارائه یکپارچه اخبار، اطلاعات تیم، مسابقات، بازیکنان، گالری تصاویر و ویدیو، آکادمی و خدمات هواداری توسعه یافته است.",
+    fullDescription:"وب‌سایت رسمی باشگاه تراکتور به‌عنوان یک پلتفرم جامع ورزشی و هواداری طراحی و توسعه داده شد تا اطلاعات و خدمات مختلف باشگاه را در یک تجربه یکپارچه در اختیار هواداران قرار دهد. این پلتفرم بخش‌هایی مانند اخبار باشگاه و تیم‌های مختلف، اطلاعات بازیکنان و کادر فنی، مسابقات و جدول رقابت‌ها، افتخارات باشگاه، گالری تصاویر و ویدیو، آکادمی فوتبال و سرویس‌های هواداری را پوشش می‌دهد. همچنین ارتباط مستقیم با سرویس‌هایی مانند خرید بلیت، تلویزیون باشگاه و محتوای ویدیویی در ساختار پلتفرم در نظر گرفته شده است.",
+    tags: ["Next.js","TypeScript","Tailwindcss", "PWA","Node.js", "Docker","Mongodb"],
+    color: "from-emerald-500/40 to-primary/40",
+    hoverColor: "group-hover:from-emerald-500/60 group-hover:to-primary/60",
+    features: [
+      { title: "Comprehensive Sports Platform", description: "توسعه یک پلتفرم جامع برای پوشش بخش‌های مختلف باشگاه شامل اخبار، تیم بزرگسالان و بانوان، آکادمی، بازیکنان، مسابقات، افتخارات و محتوای رسانه‌ای." },
+      { title: "Live Match & Team Information", description: "نمایش اطلاعات مسابقات، برنامه بازی‌ها، نتایج، جدول رقابت‌ها و اطلاعات بازیکنان و کادر فنی برای ارائه یک مرجع کامل و به‌روز از وضعیت تیم." },
+      { title: "News & Multimedia Content", description:"ایجاد ساختار یکپارچه برای ارائه اخبار، گزارش‌های تصویری، گالری تصاویر و محتوای ویدیویی باشگاه با دسته‌بندی بر اساس تیم و نوع محتوا."},
+      { title: "Integrated Club Services", description:"یکپارچه‌سازی دسترسی به سرویس‌های جانبی باشگاه مانند خرید بلیت، تلویزیون تراکتور، محتوای ویدیویی و فروشگاه در ساختار اصلی پلتفرم."},
+      { title: "Responsive RTL Experience", description:"پیاده‌سازی رابط کاربری واکنش‌گرا و راست‌چین با تمرکز بر تجربه کاربری مناسب برای کاربران فارسی‌زبان در دستگاه‌های مختلف."},
+    ],
+    techStack: ["Next.js", "TypeScript", "Tailwindcss", "Docker", "shadcn", "Framer Motion", "Prisma", "mongodb", "Node.js "],
+    implementation: `
+    این پروژه به‌عنوان پلتفرم دیجیتال باشگاه تراکتور با هدف ایجاد یک مرجع یکپارچه برای اطلاعات ورزشی، اخبار و تعامل با هواداران توسعه داده شد.
+
+Frontend با استفاده از **React.js و TypeScript** پیاده‌سازی شد و ساختار کامپوننت‌ها به‌صورت قابل توسعه طراحی گردید تا بخش‌های مختلف پلتفرم مانند اخبار، بازیکنان، مسابقات، جدول رقابت‌ها، افتخارات، گالری و آکادمی در یک تجربه یکپارچه ارائه شوند.
+
+یکی از بخش‌های اصلی پروژه، پیاده‌سازی ساختار نمایش اطلاعات تیم و مسابقات بود که شامل برنامه بازی‌ها، جدول رقابت‌ها، اطلاعات بازیکنان، پست بازیکنان و کادر فنی می‌شود.
+
+برای مدیریت محتوای گسترده باشگاه، ساختارهای مختلفی برای نمایش **News، Image Gallery، Video Content و Club Information** ایجاد شد تا محتوای مربوط به تیم بزرگسالان، بانوان و آکادمی بتواند به‌صورت تفکیک‌شده در اختیار کاربران قرار گیرد.
+
+همچنین سرویس‌های مختلف باشگاه مانند **Ticketing، Tractor TV، Video Platform و Store** در معماری رابط کاربری در نظر گرفته شدند تا کاربران بتوانند از طریق وب‌سایت اصلی به سرویس‌های مرتبط دسترسی داشته باشند.
+
+رابط کاربری با تمرکز بر **Responsive Design، RTL و تجربه کاربری فارسی** توسعه داده شد و برای استقرار و اجرای پروژه از محیط Containerized استفاده شده است.
+    `,
+    liveUrl: "https://tractor-club.com/fa",
+    githubUrl: "#",
+    images: {
+      hero: tractor,
+      gallery: [
+       
+      ],
+    },
+  },
+  {
     id: "RealEstateOS",
     title: "RealEstateOS — Real Estate Management SaaS",
     shortDescription:"پلتفرم SaaS چندمستاجری (Multi-Tenant) برای دیجیتالی‌سازی فرآیندهای مدیریت آژانس‌های املاک، شامل مدیریت Leads، Deals، قراردادها، پرداخت‌ها، بازدیدها، Tasks، Activities و کمیسیون‌های مالی.",   
