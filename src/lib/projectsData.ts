@@ -118,16 +118,27 @@ export const projects: Project[] = [
     tags: ["React", "Express", "TypeScript", "Tailwindcss" ,'Shadcn UI', "PostgreSQL" ,'Node.js' ,'Docker' ,'Redis' ],
     color: "from-primary/40 to-blue-500/40",
     hoverColor: "group-hover:from-primary/60 group-hover:to-blue-500/60",
-    features: [
-      { title: "Real-time Data Sync", description: " Live data updates through WebSocket connections with zero latency" },
-      { title: "High-Density Rendering", description: "Optimized visual engine capable of displaying complex datasets without compromising browser performance." },
-      { title: "Custom Dashboards", description: "Drag-and-drop dashboard builder with over 20 widget types" },
-      { title: "Smart Alerts", description: "AI-powered anomaly detection with customizable alert thresholds" },
-    ],
-    techStack: ["React", "TypeScript", "Shadcn UI" ,"Tailwindcss" , "WebSocket", "Node.js", "PostgreSQL", "Redis", "Docker"],
-    implementation: "The architecture integrates a custom AI logic engine that cross-references biometric data—including waist circumference and BMI—against medical contraindications to ensure user safety. Node.js handles high-concurrency requests for real-time diet and training adjustments, while PostgreSQL manages complex relational health profiles. The front end leverages Tailwind CSS for a pixel-perfect, responsive UI, featuring a persistent state-managed Dark/Light mode and secure JWT-based authentication for medical-grade data privacy.",
-    liveUrl: "https://Myelixia.com",
-    githubUrl: "https://github.com/example/nebula",
+   features: [
+  {
+    title: "همگام‌سازی لحظه‌ای داده‌ها",
+    description: "به‌روزرسانی زنده داده‌ها از طریق اتصالات WebSocket با حداقل تأخیر",
+  },
+  {
+    title: "نمایش بهینه داده‌های حجیم",
+    description: "موتور بصری بهینه‌شده برای نمایش مجموعه‌داده‌های پیچیده بدون افت عملکرد مرورگر",
+  },
+  {
+    title: "داشبوردهای سفارشی",
+    description: "ابزار ساخت داشبورد با قابلیت کشیدن و رها کردن و بیش از ۲۰ نوع ویجت",
+  },
+  {
+    title: "هشدارهای هوشمند",
+    description: "تشخیص ناهنجاری‌ها با کمک هوش مصنوعی و آستانه‌های هشدار قابل تنظیم",
+  },
+],
+techStack: ["React","TypeScript","Shadcn UI","Tailwind CSS","WebSocket","Node.js","PostgreSQL","Redis","Docker",],
+implementation:"معماری این سامانه از یک موتور اختصاصی مبتنی بر هوش مصنوعی استفاده می‌کند که داده‌های زیست‌سنجی، از جمله دور کمر و شاخص توده بدنی (BMI)، را با محدودیت‌ها و موارد منع پزشکی تطبیق می‌دهد تا ایمنی کاربران تضمین شود. Node.js درخواست‌های هم‌زمان متعدد را برای تنظیم لحظه‌ای برنامه‌های غذایی و تمرینی مدیریت می‌کند، در حالی که PostgreSQL وظیفه مدیریت پروفایل‌های سلامت با روابط پیچیده را بر عهده دارد. رابط کاربری با استفاده از Tailwind CSS به‌صورت واکنش‌گرا و با دقت بالا طراحی شده است و شامل قابلیت تغییر حالت روشن و تاریک با حفظ وضعیت انتخاب‌شده و احراز هویت امن مبتنی بر JWT برای حفاظت از حریم خصوصی داده‌های حساس سلامت است.",
+liveUrl: "https://Myelixia.com",
     images: {
      hero:"https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&h=800&fit=crop",
       gallery: [
@@ -158,15 +169,27 @@ export const projects: Project[] = [
     tags: ["React","TypeScript","Tailwindcss", "Zustand","Shadcn UI","Node.js", "Docker","Mongodb"],
     color: "from-emerald-500/40 to-primary/40",
     hoverColor: "group-hover:from-emerald-500/60 group-hover:to-primary/60",
-    features: [
-      { title: "Specific chat system", description: "You can chat with anyone you interested in coup" },
-      { title: "Smooth Transitions", description: "Powered page transitions that feel like native app navigation" },
-      { title: "Get notification for any announcement", description: "Get notifications for any announcement in the system as soon as it is posted" },
-      { title: "Super admin panel", description: "Comprehensive admin dashboard for managing all aspects of the CoUp platform" },
-    ],
-    techStack: ["React","TypeScript","Tailwindcss", "Zustand","Shadcn UI","Node.js", "Docker","Mongodb", "GSAP", "Framer Motion"],
-    implementation: `CoUp is an end-to-end solution for managing shared workspaces. It transforms the friction of manual office management into a seamless digital experience. The platform allows users to experience a modern workspace with real-time online booking for desks and meeting rooms.`,
-    liveUrl: "https://coup.davandegan.cloud",
+   features: [
+  {
+    title: "سیستم گفت‌وگوی اختصاصی",
+    description: "امکان گفت‌وگو و چت با افراد موردنظر در پلتفرم CoUp",
+  },
+  {
+    title: "انتقال روان بین صفحات",
+    description: "جابجایی روان و انیمیشنی بین صفحات با تجربه‌ای مشابه اپلیکیشن‌های بومی",
+  },
+  {
+    title: "اعلان‌های لحظه‌ای",
+    description: "دریافت اعلان درباره اطلاعیه‌های جدید سیستم بلافاصله پس از انتشار",
+  },
+  {
+    title: "پنل مدیریت کل",
+    description: "داشبورد جامع مدیریتی برای کنترل و مدیریت تمام بخش‌های پلتفرم CoUp",
+  },
+],
+techStack: ["React","TypeScript","Tailwind CSS","Zustand","Shadcn UI","Node.js","Docker","MongoDB","GSAP","Framer Motion",],
+implementation: `CoUp یک راهکار جامع برای مدیریت فضاهای کاری اشتراکی است که فرایندهای دشوار و دستی مدیریت دفتر کار را به تجربه‌ای دیجیتال و یکپارچه تبدیل می‌کند. این پلتفرم امکان رزرو آنلاین و لحظه‌ای میزهای کاری و اتاق‌های جلسات را فراهم می‌سازد و تجربه‌ای مدرن و کارآمد از استفاده از فضای کار اشتراکی در اختیار کاربران قرار می‌دهد.`,
+liveUrl: "https://coup.davandegan.cloud",
     githubUrl: "https://github.com/example/aurora",
     images: {
       hero: herocoup2,
