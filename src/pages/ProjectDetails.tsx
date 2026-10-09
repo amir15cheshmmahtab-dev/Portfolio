@@ -494,12 +494,11 @@ const ProjectDetails = () => {
       <motion.section
         ref={heroRef}
         className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
-        style={{ y: heroY }}
       >
         {/* Background Image with Overlay */}
         <motion.div
           className="absolute inset-0"
-          style={{ opacity: heroOpacity, scale: heroScale }}
+          style={{ y: heroY, opacity: heroOpacity, scale: heroScale }}
         >
           {/* this is our image background */}
           <div   
@@ -525,11 +524,11 @@ const ProjectDetails = () => {
         />
 
         {/* Content */}
-        <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 pt-28 pb-24 md:pt-32 md:pb-20 relative z-10">
           {/* Back Button */}
           <motion.button
             onClick={() => navigate("/")}
-            className="flex items-center gap-2 text-white/80 hover:text-white dark:text-muted-foreground dark:hover:text-foreground mb-8 group transition-colors"
+            className="flex min-h-11 items-center gap-2 text-white/80 hover:text-white dark:text-muted-foreground dark:hover:text-foreground mb-6 md:mb-8 group transition-colors"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             whileHover={{ x: -5 }}
@@ -561,14 +560,15 @@ const ProjectDetails = () => {
 
           {/* Title */}
           <div className="mb-8">
-            <div className="text-5xl md:text-7xl font-display font-bold text-white dark:text-foreground drop-shadow-lg">
+            <div className="text-4xl md:text-7xl font-display font-bold text-white dark:text-foreground drop-shadow-lg">
               <AnimatedText text={project.title} className="" />
             </div>
           </div>
 
           {/* Description */}
           <motion.p
-            className="text-xl md:text-2xl text-white/90 dark:text-muted-foreground mb-10 drop-shadow-md"
+            lang="fa"
+            className="max-w-4xl break-words text-xl md:text-2xl text-white/90 dark:text-muted-foreground mb-8 md:mb-10 drop-shadow-md"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -578,27 +578,27 @@ const ProjectDetails = () => {
 
           {/* Action Buttons */}
           <motion.div
-            className="flex flex-wrap gap-4"
+            className="relative z-20 flex flex-wrap gap-3 md:gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
             {project.liveUrl && (
               <MagneticButton
-              onClick={() => window.open(project.liveUrl, "_blank")}
-                className="px-8 py-4 border border-border rounded-full font-semibold flex items-center gap-2 hover:bg-secondary transition-colors glow-subtle"
+                onClick={() => window.open(project.liveUrl, "_blank", "noopener,noreferrer")}
+                className="w-full sm:w-auto max-w-full justify-center whitespace-normal px-5 py-3 sm:px-8 sm:py-4 border border-border rounded-full font-semibold flex items-center gap-2 hover:bg-secondary transition-colors glow-subtle"
               >
                 <ExternalLink className="w-5 h-5 " />
-                رفتن به وبسایت
+                <span lang="fa">رفتن به وبسایت</span>
               </MagneticButton>
             )}
             {project.githubUrl && (
               <MagneticButton
-                onClick={() => window.open(project.githubUrl, "_blank")}
-                className="px-8 py-4 border border-border rounded-full font-semibold flex items-center gap-2 hover:bg-secondary transition-colors"
+                onClick={() => window.open(project.githubUrl, "_blank", "noopener,noreferrer")}
+                className="w-full sm:w-auto max-w-full justify-center whitespace-normal px-5 py-3 sm:px-8 sm:py-4 border border-border rounded-full font-semibold flex items-center gap-2 hover:bg-secondary transition-colors"
               >
                 <Github className="w-5 h-5" />
-                سورس کد محرمانه میباشد
+                <span lang="fa">سورس کد محرمانه میباشد</span>
               </MagneticButton>
             )}
           </motion.div>
@@ -606,7 +606,7 @@ const ProjectDetails = () => {
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 md:block"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
@@ -663,7 +663,7 @@ const ProjectDetails = () => {
                     <span className="text-2xl font-bold text-primary">{index + 1}</span>
                   </motion.div>
                   <h3 className="text-xl font-display font-bold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                  <p lang="fa" className="text-muted-foreground leading-relaxed">{feature.description}</p>
                 </LiquidGlass>
               </motion.div>
             ))}
@@ -774,7 +774,7 @@ const ProjectDetails = () => {
                 <span className="text-gradient">Implementation</span>
               </h2>
               <LiquidGlass className="p-8" intensity="medium">
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p lang="fa" className="text-muted-foreground leading-relaxed text-lg">
                   {project.implementation}
                 </p>
               </LiquidGlass>
@@ -797,17 +797,17 @@ const ProjectDetails = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
             >
-              <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
+              <h2 lang="fa" className="text-3xl md:text-5xl font-display font-bold mb-6">
                   چیزی که می‌بینید را دوست دارید؟
               </h2>
-              <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              <p lang="fa" className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
 خوشحال می‌شوم درباره ایده و چشم‌انداز شما صحبت کنیم و با همان میزان خلاقیت و دقت، در تبدیل آن به یک تجربه دیجیتال حرفه‌ای همراهتان باشم.              </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
                 <MagneticButton
                   onClick={() => navigate("/")}
-                  className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold glow-primary"
+                  className="w-full sm:w-auto px-5 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground rounded-full font-semibold glow-primary"
                 >
-                  مشاهده پروژه های بیشتر
+                  <span lang="fa">مشاهده پروژه های بیشتر</span>
                 </MagneticButton>
                 <MagneticButton
                   onClick={() => {
@@ -816,9 +816,9 @@ const ProjectDetails = () => {
                       document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                     }, 100);
                   }}
-                  className="px-8 py-4 border border-border rounded-full font-semibold hover:bg-secondary transition-colors"
+                  className="w-full sm:w-auto px-5 py-3 sm:px-8 sm:py-4 border border-border rounded-full font-semibold hover:bg-secondary transition-colors"
                 >
-                  ارتباط با من
+                  <span lang="fa">ارتباط با من</span>
                 </MagneticButton>
               </div>
             </motion.div>

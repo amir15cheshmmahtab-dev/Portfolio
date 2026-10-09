@@ -419,7 +419,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section ref={ref} id="contact" className="py-32 relative overflow-hidden">
+    <section ref={ref} id="contact" className="py-20 md:py-32 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-t from-secondary/30 to-transparent" />
 
@@ -446,7 +446,7 @@ const ContactSection = () => {
         />
       ))}
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           className="max-w-4xl mx-auto"
           variants={containerVariants}
@@ -454,7 +454,7 @@ const ContactSection = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           {/* Header */}
-          <motion.div className="text-center mb-16" variants={itemVariants}>
+          <motion.div className="text-center mb-10 md:mb-16" variants={itemVariants}>
             <motion.h2
               className="text-sm uppercase tracking-widest text-primary mb-4"
               animate={{ letterSpacing: isInView ? "0.2em" : "0.1em" }}
@@ -465,7 +465,7 @@ const ContactSection = () => {
               <AnimatedText text="Let's" className="justify-center" />
               <AnimatedText text="Collaborate" className="justify-center text-gradient" delay={0.2} />
             </div>
-            <motion.p className="text-xl text-muted-foreground max-w-2xl mx-auto" variants={itemVariants}>
+            <motion.p lang="fa" className="text-xl text-muted-foreground max-w-2xl mx-auto" variants={itemVariants}>
              ایده‌ای در ذهن دارید؟
 بیایید درباره‌اش صحبت کنیم و با هم آن را به یک تجربه دیجیتال جذاب تبدیل کنیم.
             </motion.p>
@@ -473,7 +473,7 @@ const ContactSection = () => {
 
           {/* Contact Card */}
           <motion.div
-            className="glass rounded-3xl p-8 md:p-12 relative overflow-hidden"
+            className="glass rounded-3xl p-5 sm:p-8 md:p-12 relative overflow-hidden"
             variants={itemVariants}
             style={{ transformStyle: "preserve-3d", perspective: 1200 }}
             whileHover={{
@@ -495,10 +495,10 @@ const ContactSection = () => {
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             />
 
-            <div className="grid md:grid-cols-2 gap-12 relative z-10">
+            <div className="grid min-w-0 md:grid-cols-2 gap-8 md:gap-12 relative z-10">
               {/* ── Info Side ── */}
-              <div className="space-y-8">
-                <motion.div className="flex items-center gap-4 group cursor-pointer" whileHover={{ x: 10 }} variants={itemVariants}>
+              <div className="min-w-0 space-y-8">
+                <motion.a href="mailto:amir15cheshmmahtab@gmail.com" className="flex min-h-12 min-w-0 items-center gap-4 group" whileHover={{ x: 10 }} variants={itemVariants}>
                   <motion.div
                     className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors"
                     whileHover={{ rotate: 360, scale: 1.1 }}
@@ -506,13 +506,12 @@ const ContactSection = () => {
                   >
                     <Mail className="w-5 h-5 text-primary" />
                   </motion.div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-semibold group-hover:text-primary transition-colors">amir15cheshmmahtab@gmail.com</p>
-                  </div>
-                </motion.div>
+                    <p className="break-all text-sm md:text-base font-semibold group-hover:text-primary transition-colors">amir15cheshmmahtab@gmail.com </p></div>
+                </motion.a>
 
-                <motion.div className="flex items-center gap-4 group cursor-pointer" whileHover={{ x: 10 }} variants={itemVariants}>
+                <motion.div className="flex min-h-12 min-w-0 items-center gap-4 group" whileHover={{ x: 10 }} variants={itemVariants}>
                   <motion.div
                     className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors"
                     whileHover={{ rotate: 360, scale: 1.1 }}
@@ -520,9 +519,9 @@ const ContactSection = () => {
                   >
                     <MapPin className="w-5 h-5 text-primary" />
                   </motion.div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-semibold group-hover:text-primary transition-colors">Tehran, Iran</p>
+                  <div className="min-w-0">
+                    <p className="text-sm text-muted-foreground text-right">Location</p>
+                    <p className="text-sm md:text-base font-semibold group-hover:text-primary transition-colors">Tehran, Iran</p>
                   </div>
                 </motion.div>
 

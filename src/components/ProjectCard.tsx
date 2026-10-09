@@ -19,6 +19,18 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
     navigate(`/project/${project.id}`);
   };
 
+  const handleHoverStart = () => {
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      setIsHovered(true);
+    }
+  };
+
+  const handleHoverEnd = () => {
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      setIsHovered(false);
+    }
+  };
+
   const handleGithubClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (project.githubUrl) {
@@ -33,8 +45,8 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       initial={{ opacity: 0, y: 100, rotateX: -15 }}
       animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
       transition={{ duration: 0.8, delay: index * 0.2, type: "spring" }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleHoverStart}
+      onMouseLeave={handleHoverEnd}
       onClick={handleProjectClick}
       style={{ perspective: 1000 }}
     >
@@ -141,15 +153,26 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         </div>
 
         {/* Project Info */}
-        <div className="p-6">
+        <div className="min-w-0 p-5 sm:p-6">
           <motion.h3
             className={`text-xl font-display font-bold mb-2 transition-all ${isHovered ? "text-gradient" : ""}`}
           >
             {project.title}
           </motion.h3>
-          <p className="text-muted-foreground mb-4">
+          <p lang="fa" className="text-muted-foreground mb-4 break-words">
             {project.shortDescription}
           </p>
+          {project.githubUrl && (
+            <button
+              type="button"
+              className="touch-card-action mb-4 items-center gap-2 text-sm text-muted-foreground"
+              onClick={handleGithubClick}
+              aria-label="View GitHub repository"
+            >
+              <Github className="w-4 h-4" />
+              GitHub
+            </button>
+          )}
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag, tagIndex) => (
               <motion.span

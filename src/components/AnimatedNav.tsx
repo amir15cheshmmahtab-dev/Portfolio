@@ -58,11 +58,11 @@ const AnimatedNav = () => {
         }}
         className="fixed top-0 left-0 right-0 z-50 border-b border-border/0 transition-colors"
       >
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <motion.button
               onClick={() => scrollToSection("home")}
-              className="text-2xl font-display font-bold text-gradient"
+              className="whitespace-nowrap text-base sm:text-lg md:text-2xl font-display font-bold text-gradient"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
